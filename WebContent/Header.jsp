@@ -1,6 +1,5 @@
 <html>
 <head>
-<title>Bootstrap Example</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
@@ -60,7 +59,7 @@ footer {
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">Home</a></li>
+					<li class="active"><a href="Welcome.jsp">Home</a></li>
 					<li><a href="admin.jsp">ADMINISTRATION</a></li>
 					<li><a href="voter.jsp">VOTER</a></li>
 					<li><a href="candidate.jsp">CANDIDATE</a></li>
