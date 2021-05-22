@@ -4,7 +4,7 @@
 <p align="center"> Welcome to the Voter page</p>
 <jsp:include page="register-header.html" />
 
-<form action="#">
+<form action="registerVoter" method="get">
   <div class="container">
     <h1>Login</h1>
     <p>Please enter the Email and Password.</p>
@@ -15,7 +15,7 @@
 
     <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
-
+	<input type="hidden" name="hide_value" id="hide_value" value="2" />
     <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
 
     <button type="submit" class="registerbtn">Login</button>

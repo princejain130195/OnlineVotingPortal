@@ -14,7 +14,7 @@
 	<p align="center">Welcome to the Voter page</p>
 	<jsp:include page="register-header.html" />
 
-	<form action="#">
+	<form action="registerVoter" method="get">
 		<div class="container">
 			<h1>Login</h1>
 			<p>Please fill the details for sign in.</p>
@@ -35,9 +35,9 @@
 			<label for="name"><b>Date Of Birth</b></label> <input type="date"
 				name="dob" id="dob" required><br />
 			<br /> <label for="gender"><b>Please select your gender:</b></label>
-			<input type="radio" id="male" name="gender" value="male">Male
-			<input type="radio" id="female" name="gender" value="female">Female
-			<input type="radio" id="other" name="gender" value="other">Other
+			<input type="radio" id="male" name="gender" value="1" required>Male
+			<input type="radio" id="female" name="gender" value="2" required>Female
+			<input type="radio" id="other" name="gender" value="3" required>Other
 
 			<br />
 			<br /> <label for="addhar"><b>Addhaar Number</b></label> <input
@@ -49,6 +49,8 @@
 				required> <label for="psw"><b>Confirm Password</b></label> <input
 				type="password" placeholder="Renter Password" name="cpsw" id="cpsw"
 				required>
+				
+				<input type="hidden" name="hide_value" id="hide_value" value="1" />
 
 			<p>
 				By creating an account you agree to our <a href="#">Terms &
