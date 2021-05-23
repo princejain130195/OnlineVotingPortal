@@ -19,7 +19,7 @@ public class VoterConstants {
 	public static final String EQUAL_PARAM = " = ? ";
 	public static final String WHERE = " where ";
 	public static final String IN = " in ";
-	public static final String AND = " and";
+	public static final String AND = " and ";
 	
 	public static final String ID = "id";
 	public static final String FIRSTNAME = "firstname";
@@ -45,6 +45,7 @@ public class VoterConstants {
 	
 	public static final String STATUS_VOTER_REGISTER = "1";
 	public static final String STATUS_VOTER_SIGNIN = "2";
+	public static final String STATUS_VOTER_LOGIN = "2";
 	
 	
 	public static String configGender(int gender) {

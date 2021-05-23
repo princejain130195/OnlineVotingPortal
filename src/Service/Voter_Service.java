@@ -1,6 +1,7 @@
 package Service;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.URLEncoder;
 import java.text.ParseException;
 
 import javax.servlet.ServletException;
@@ -35,12 +36,14 @@ public class Voter_Service extends HttpServlet {
 		if (voter.getHidden_status().equals(VoterConstants.STATUS_VOTER_REGISTER)) {
 			VoterDAO.regVoterDetails(voter);
 			out.println("<h1>U have Registered successfully.</h1>");
-		} else if (voter.getHidden_status().equals(VoterConstants.STATUS_VOTER_SIGNIN)) {
+		} else if (voter.getHidden_status().equals(VoterConstants.STATUS_VOTER_LOGIN)) {
 			boolean isUserPass = VoterDAO.signInVoter(voter);
 			if (isUserPass) {
-				out.println("<h1>Thank You for Sign In!! </h1>");
+				String message = "Thank You for Sign In!!";
+				resp.sendRedirect("voter-login.jsp?success=" + URLEncoder.encode(message, "UTF-8"));
 			} else {
-				out.println("<h1>Soory, U have entered the wrong credentials. </h1>");
+				String message = "Soory, U have entered the wrong credentials.";
+				resp.sendRedirect("voter-login.jsp?fail=" + URLEncoder.encode(message, "UTF-8"));
 			}
 		}
 	}

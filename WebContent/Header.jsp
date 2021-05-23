@@ -59,9 +59,10 @@ footer {
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="Welcome.jsp">Home</a></li>
+					<!-- <li class="active"><a href="Welcome.jsp">Home</a></li> -->
+					<li><a href="Welcome.jsp">HOME</a></li>
 					<li><a href="admin.jsp">ADMINISTRATION</a></li>
-					<li><a href="voter.jsp">VOTER</a></li>
+					<li><a href="voter-login.jsp">VOTER</a></li>
 					<li><a href="candidate.jsp">CANDIDATE</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">

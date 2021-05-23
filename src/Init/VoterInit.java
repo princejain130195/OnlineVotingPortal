@@ -23,9 +23,10 @@ public class VoterInit {
 			voter.setVoter_userName(req.getParameter("email"));
 			voter.setVoter_password(req.getParameter("psw"));
 		}else if(voter.getHidden_status().equalsIgnoreCase(VoterConstants.STATUS_VOTER_SIGNIN)) {
-			voter.setVoter_userName(req.getParameter("email"));
-			voter.setVoter_password(req.getParameter("psw"));
+			voter.setVoter_signin_userName(req.getParameter("email"));
+			voter.setVoter_signin_password(req.getParameter("psw"));
 		}
+		System.out.println(voter.getVoter_signin_userName()+"  "+voter.getVoter_signin_password());
 		return voter;
 	}
 

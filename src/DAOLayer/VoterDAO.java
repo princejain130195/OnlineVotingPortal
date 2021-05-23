@@ -14,14 +14,12 @@ public class VoterDAO {
 	//registering voting details
 	public static void regVoterDetails(Voter voter) {
 		try {
-			System.out.println("ok");
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/voterinfo", "root", "root");
 			Statement stmt = con.createStatement();
 			String query = addingQueryForRegister(voter).toString();
-			//stmt.executeUpdate(query);
+			stmt.executeUpdate(query);
 			con.close();
-			System.out.println("inserted");
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		} catch (SQLException e) {
@@ -33,7 +31,6 @@ public class VoterDAO {
 	public static boolean signInVoter(Voter voter) {
 		boolean isEmailPassword = false;
 		try {
-			System.out.println("ok");
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/voterinfo", "root", "root");
 			String query = addingQueryForSignIn().toString();
@@ -44,7 +41,6 @@ public class VoterDAO {
 			if (rs.next()) {
 				isEmailPassword = true;
 			}
-			System.out.println("selected");
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		} catch (SQLException e) {
