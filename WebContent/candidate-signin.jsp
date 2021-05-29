@@ -3,8 +3,8 @@
 
 	<script type="text/javascript">
 		function validatePasswords() {
-			var t1 = parseInt(document.getElementById("psw").value);
-			var t2 = parseInt(document.getElementById("cpsw").value);
+			var t1 = parseInt(document.getElementById("password").value);
+			var t2 = parseInt(document.getElementById("cpassword").value);
 			if(t1 != t2){
 				alert("Entered Password and Confirm Password is mismatch.");
 			}
@@ -14,7 +14,7 @@
 	<p align="center">Welcome to the Voter page</p>
 	<jsp:include page="register-header.html" />
 
-	<form action="registerVoter" method="get">
+	<form action="registerCandidate" method="get">
 		<div class="container">
 			<h1>Register</h1>
 			<p>Please fill the details for sign in.</p>
@@ -45,9 +45,9 @@
 				required> <label for="email"><b>Email</b></label> <input
 				type="text" placeholder="Enter Email" name="email" id="email"
 				required> <label for="psw"><b>Password</b></label> <input
-				type="password" placeholder="Enter Password" name="psw" id="psw"
+				type="password" placeholder="Enter Password" name="psw" id="password"
 				required> <label for="psw"><b>Confirm Password</b></label> <input
-				type="password" placeholder="Renter Password" name="cpsw" id="cpsw"
+				type="password" placeholder="Renter Password" name="cpsw" id="cpassword"
 				required>
 				
 				<input type="hidden" name="hide_value" id="hide_value" value="1" />
@@ -58,7 +58,7 @@
 			</p>
 
 			<button type="submit" class="registerbtn"
-				onclick="validatePasswords()">Login</button>
+				onclick="validatePasswords()">Register</button>
 		</div>
 
 		<div class="container signin"></div>

@@ -1,10 +1,10 @@
 package Constants;
 
-
-public class VoterConstants {
-	
+public class CandidateConstants {
+	public static final String CANDIDATE_TABLE = " tt_candidate ";
 	public static final String VOTER_TABLE = " tt_voter ";
-	
+	//same as db column name
+
 	public static final String INSERT = "insert into ";
 	public static final String SELECT = "select ";
 	public static final String STAR = " *";
@@ -44,8 +44,7 @@ public class VoterConstants {
 	public static final String FEMALEs = "female";
 	public static final String OTHERs = "other";
 	
-	public static final String STATUS_VOTER_REGISTER = "1";
-	public static final String STATUS_VOTER_SIGNIN = "2";
+	public static final String STATUS_CANDIDATE_REGISTER = "1";
 	public static final String STATUS_VOTER_LOGIN = "2";
 	
 	
@@ -60,7 +59,4 @@ public class VoterConstants {
 		return null;
 		
 	}
-	
-	
-
 }

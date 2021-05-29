@@ -15,11 +15,12 @@ public class VoterDAO {
 	public static void regVoterDetails(Voter voter) {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/voterinfo", "root", "root");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:5555/voterinfo", "root", "root");
 			Statement stmt = con.createStatement();
 			String query = addingQueryForRegister(voter).toString();
 			stmt.executeUpdate(query);
 			con.close();
+			stmt.close();
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		} catch (SQLException e) {

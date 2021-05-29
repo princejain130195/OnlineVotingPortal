@@ -5,26 +5,34 @@ import java.util.Date;
 public class Voter {
 	
 	//Voter Register Parameters
-	private static int voter_id;
-	private static String voter_firstName;
-	private static String voter_lastName;
-	private static String voter_fatherName;
-	private static String voter_motherName;
-	private static String voter_DOB;
-	private static int voter_gender;
-	private static int isActive;
-	private static String voter_Addhar;
-	private static String voter_userName;
-	private static String voter_password;
-	private static Date createtime;
-	private static Date modtime;
+	private  int voter_id;
+	private  String voter_firstName;
+	private  String voter_lastName;
+	private  String voter_fatherName;
+	private  String voter_motherName;
+	private  String voter_DOB;
+	private  int voter_gender;
+	private  int isActive;
+	private  String voter_Addhar;
+	private  String voter_userName;
+	private  String voter_password;
+	private  Date createtime;
+	private  Date modtime;
 	
 	//Voter SignIn Parameters
-	private static String voter_signin_userName;
-	private static String voter_signin_password;
+	private  String voter_signin_userName;
+	private  String voter_signin_password;
+	
+	/*
+	 * public Voter Voter(Candidate candidate) { Voter voter = new Voter(); voter.
+	 * 
+	 * 
+	 * return voter; }
+	 */
+	
 	
 	//Voter Hidden Status
-	private static String hidden_status;
+	private  String hidden_status;
 	
 	/**
 	 * @return the voter_id
@@ -108,79 +116,79 @@ public class Voter {
 	 * @param voter_id the voter_id to set
 	 */
 	public void setVoter_id(int voter_id) {
-		Voter.voter_id = voter_id;
+		this.voter_id = voter_id;
 	}
 	/**
 	 * @param voter_firstName the voter_firstName to set
 	 */
 	public void setVoter_firstName(String voter_firstName) {
-		Voter.voter_firstName = voter_firstName;
+		this.voter_firstName = voter_firstName;
 	}
 	/**
 	 * @param voter_lastName the voter_lastName to set
 	 */
 	public void setVoter_lastName(String voter_lastName) {
-		Voter.voter_lastName = voter_lastName;
+		this.voter_lastName = voter_lastName;
 	}
 	/**
 	 * @param voter_fatherName the voter_fatherName to set
 	 */
 	public void setVoter_fatherName(String voter_fatherName) {
-		Voter.voter_fatherName = voter_fatherName;
+		this.voter_fatherName = voter_fatherName;
 	}
 	/**
 	 * @param voter_motherName the voter_motherName to set
 	 */
 	public void setVoter_motherName(String voter_motherName) {
-		Voter.voter_motherName = voter_motherName;
+		this.voter_motherName = voter_motherName;
 	}
 	/**
 	 * @param voter_DOB the voter_DOB to set
 	 */
 	public void setVoter_DOB(String voter_DOB) {
-		Voter.voter_DOB = voter_DOB;
+		this.voter_DOB = voter_DOB;
 	}
 	/**
 	 * @param voter_gender the voter_gender to set
 	 */
 	public void setVoter_gender(int voter_gender) {
-		Voter.voter_gender = voter_gender;
+		this.voter_gender = voter_gender;
 	}
 	/**
 	 * @param isActive the isActive to set
 	 */
 	public void setIsActive(int isActive) {
-		Voter.isActive = isActive;
+		this.isActive = isActive;
 	}
 	/**
 	 * @param voter_Addhar the voter_Addhar to set
 	 */
 	public void setVoter_Addhar(String voter_Addhar) {
-		Voter.voter_Addhar = voter_Addhar;
+		this.voter_Addhar = voter_Addhar;
 	}
 	/**
 	 * @param voter_userName the voter_userName to set
 	 */
 	public void setVoter_userName(String voter_userName) {
-		Voter.voter_userName = voter_userName;
+		this.voter_userName = voter_userName;
 	}
 	/**
 	 * @param voter_password the voter_password to set
 	 */
 	public void setVoter_password(String voter_password) {
-		Voter.voter_password = voter_password;
+		this.voter_password = voter_password;
 	}
 	/**
 	 * @param createtime the createtime to set
 	 */
 	public void setCreatetime(Date createtime) {
-		Voter.createtime = createtime;
+		this.createtime = createtime;
 	}
 	/**
 	 * @param modtime the modtime to set
 	 */
 	public void setModtime(Date modtime) {
-		Voter.modtime = modtime;
+		this.modtime = modtime;
 	}
 	
 	/**
@@ -205,19 +213,19 @@ public class Voter {
 	 * @param voter_signin_userName the voter_signin_userName to set
 	 */
 	public void setVoter_signin_userName(String voter_signin_userName) {
-		Voter.voter_signin_userName = voter_signin_userName;
+		this.voter_signin_userName = voter_signin_userName;
 	}
 	/**
 	 * @param voter_signin_password the voter_signin_password to set
 	 */
 	public void setVoter_signin_password(String voter_signin_password) {
-		Voter.voter_signin_password = voter_signin_password;
+		this.voter_signin_password = voter_signin_password;
 	}
 	/**
 	 * @param hidden_status the hidden_status to set
 	 */
 	public void setHidden_status(String hidden_status) {
-		Voter.hidden_status = hidden_status;
+		this.hidden_status = hidden_status;
 	}
 	
 	
