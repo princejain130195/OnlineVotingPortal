@@ -9,6 +9,7 @@ import java.util.List;
 
 import Constants.CandidateConstants;
 import Constants.VoterConstants;
+import Controller.Candidate;
 import Controller.Voter;
 
 public class Admin_DAO {
@@ -44,8 +45,8 @@ public class Admin_DAO {
 		}
 	}
 	
-	public List<Voter> getCandidates() throws Exception {
-		List<Voter> voters = new ArrayList<>();
+	public List<Candidate> getCandidates() throws Exception {
+		List<Candidate> candidates = new ArrayList<>();
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:5555/voterinfo", "root", "root");
 		Statement stmt = con.createStatement();
@@ -53,20 +54,20 @@ public class Admin_DAO {
 		try {
 
 			while (rs.next()) {
-				Voter voter = new Voter();
-				voter.setVoter_id(rs.getInt(CandidateConstants.ID));
-				voter.setVoter_firstName(rs.getString(CandidateConstants.FIRSTNAME));
-				voter.setVoter_lastName(rs.getString(CandidateConstants.LAST_NAME));
-				voter.setVoter_fatherName(rs.getString(CandidateConstants.FATHER_NAME));
-				voter.setVoter_motherName(rs.getString(CandidateConstants.MOTHER_NAME));
-				voter.setVoter_DOB(rs.getString(CandidateConstants.DOB));
-				voter.setVoter_gender(rs.getInt(CandidateConstants.GENDER));
-				voter.setIsActive(rs.getInt(CandidateConstants.ISACTIVE));
-				voter.setVoter_Addhar(rs.getString(CandidateConstants.ADDHAR_NUMBER));
-				voter.setVoter_signin_userName(rs.getString(CandidateConstants.USER_NAME));
-				voters.add(voter);
+				Candidate candidate = new Candidate();
+				candidate.setId(rs.getInt(CandidateConstants.ID));
+				candidate.setCandidate_firstName(rs.getString(CandidateConstants.FIRSTNAME));
+				candidate.setCandidate_lastName(rs.getString(CandidateConstants.LAST_NAME));
+				candidate.setCandidate_fatherName(rs.getString(CandidateConstants.FATHER_NAME));
+				candidate.setCandidate_motherName(rs.getString(CandidateConstants.MOTHER_NAME));
+				candidate.setCandidate_DOB(rs.getString(CandidateConstants.DOB));
+				candidate.setCandidate_gender(rs.getInt(CandidateConstants.GENDER));
+				candidate.setIsActive(rs.getInt(CandidateConstants.ISACTIVE));
+				candidate.setCandidate_Addhar(rs.getString(CandidateConstants.ADDHAR_NUMBER));
+				candidate.setCandidate_userName(rs.getString(CandidateConstants.USER_NAME));
+				candidates.add(candidate);
 			}
-			return voters;
+			return candidates;
 		} finally {
 			close(con, stmt, rs);
 		}

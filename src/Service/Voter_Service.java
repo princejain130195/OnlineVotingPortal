@@ -40,7 +40,7 @@ public class Voter_Service extends HttpServlet {
 			boolean isUserPass = VoterDAO.signInVoter(voter);
 			if (isUserPass) {
 				String message = "Thank You for Sign In!!";
-				resp.sendRedirect("voter-login.jsp?success=" + URLEncoder.encode(message, "UTF-8"));
+				resp.sendRedirect("vote-desboard.jsp?success=" + URLEncoder.encode(message, "UTF-8"));
 			} else {
 				String message = "Soory, U have entered the wrong credentials.";
 				resp.sendRedirect("voter-login.jsp?fail=" + URLEncoder.encode(message, "UTF-8"));

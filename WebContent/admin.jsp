@@ -5,10 +5,11 @@
 
 <jsp:include page="register-header.html" />
 
-<form action="#">
+<form action="AdminLogin" method="get">
   <div class="container">
+  	<h2 align="center" style="color:red">${Admin}</h2>
     <h1>Login</h1>
-    <p>Please fill in this form to create an account.</p>
+    <p>Please give the credential.</p>
     <hr>
 
     <label for="email"><b>Email</b></label>
@@ -17,16 +18,10 @@
     <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
 
-    <label for="psw-repeat"><b>Repeat Password</b></label>
-    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
-    <hr>
-    <p>By creating an account you agree to our <a href="list-Candidate.jsp">Terms & Privacy</a>.</p>
-
-    <button type="submit" class="registerbtn">Register</button>
+    <button type="submit" class="registerbtn">Login</button>
   </div>
   
   <div class="container signin">
-    <p>Already have an account? <a href="list-Voters.jsp">Sign in</a>.</p>
   </div>
 </form>
 </body>

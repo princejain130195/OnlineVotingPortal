@@ -33,7 +33,7 @@ public class VoterDAO {
 		boolean isEmailPassword = false;
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/voterinfo", "root", "root");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:5555/voterinfo", "root", "root");
 			String query = addingQueryForSignIn().toString();
 			PreparedStatement ps = con.prepareStatement(query);
 			ps.setString(1, voter.getVoter_signin_userName());

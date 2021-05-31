@@ -4,28 +4,34 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 
-<%-- <% List<Voter> voters = (List<Voter>) request.getAttribute("Voter_List"); %> --%>
+
 <head>
 
 	<link type="text/css" rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
-<jsp:include page="Header.jsp" />
-<p align="center"> Welcome to the admin page</p>
 
-<form action="AdminService" method = "get">
-  	<div class="container">
-		<button type="submit" class="registerbtn">Register</button>
+<jsp:include page="Header.jsp" /><br/>
+
+	<div class="container">
+		<!-- <input type="button" value="Add Voter"
+			onclick="window.location.href='voter-signin.jsp'; return false;"
+			class="add-student-button" /> -->
 	</div>
-</form>
-
+	<hr>
+	<form action="AdminService" method="get">
+		<div class="container">
+			<button type="submit" class="add-student-button">VoterList</button>
+		</div>
+	</form>
+	<hr>
 	<div id="wrapper">
 		<div id="header">
-			<h2>Voters List</h2>
+			<h2 align = "center">Voters List</h2>
 		</div>
 	</div>
-<%-- <% if(voters != null){ %> --%>
+
 	<div id="container">
 
 		<div id="content">
@@ -41,8 +47,14 @@
 					<th>DOB</th>
 					<th>Gender</th>
 					<th>UserName</th>
+					<!-- <th>Action</th> -->
 				</tr>
 				<c:forEach var="tempStudent" items="${Voter_List}">
+				
+				<%-- <c:url var="tempLink" value="AdminService">
+						<c:param name="command" value="LOAD" />
+						<c:param name="studentId" value="${tempStudent.voter_id}" />
+				</c:url> --%>
 					
 					<tr>
 						<td>${tempStudent.voter_id}</td>
@@ -52,28 +64,22 @@
 						<td> ${tempStudent.voter_motherName} </td>
 						<td> ${tempStudent.voter_DOB} </td>
 						<td> ${tempStudent.voter_gender} </td>
-						<td> ${tempStudent.voter_userName} </td>
+						<td> ${tempStudent.voter_signin_userName} </td>
+						<%-- <td> 
+							<a href="${tempLink}">Update</a> 
+						</td> --%>
 					</tr>
 				
 				</c:forEach>
-				<%-- <% for (Voter tempVoters : voters) { %>
-				<tr>
-					<td><%= tempVoters.getVoter_firstName() %></td>
-					<td><%= tempVoters.getVoter_lastName() %></td>
-					<td><%= tempVoters.getVoter_fatherName() %></td>
-					<td><%= tempVoters.getVoter_motherName() %></td>
-					<td><%= tempVoters.getVoter_DOB() %></td>
-					<td><%= tempVoters.getVoter_gender() %></td>
-					<td><%= tempVoters.getVoter_userName() %></td>
-				</tr>
-
-				<% } %> --%>
 
 			</table>
 
 		</div>
 
 	</div>
-<%-- 	<%} %> --%>
+	<hr>
+	<p>To Go Back <a href="admin-desboard.jsp">Click Here</a>.</p>
+	<hr>
+<jsp:include page="footer.html" />
 </body>
 </html>
