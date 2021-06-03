@@ -3,7 +3,7 @@ package Controller;
 public class Sign {
 	
 	private int id;
-	private String Name;
+	private String name;
 	private int isActive;
 	
 	/**
@@ -16,7 +16,7 @@ public class Sign {
 	 * @return the name
 	 */
 	public String getName() {
-		return Name;
+		return name;
 	}
 	/**
 	 * @return the isActive
@@ -34,7 +34,7 @@ public class Sign {
 	 * @param name the name to set
 	 */
 	public void setName(String name) {
-		Name = name;
+		this.name = name;
 	}
 	/**
 	 * @param isActive the isActive to set

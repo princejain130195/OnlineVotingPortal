@@ -10,7 +10,7 @@ import Constants.VoterConstants;
 import Controller.Voter;
 
 public class VoterDAO {
-	
+	public static Voter voter1 = null;
 	//registering voting details
 	public static void regVoterDetails(Voter voter) {
 		try {
@@ -31,6 +31,7 @@ public class VoterDAO {
 	
 	public static boolean signInVoter(Voter voter) {
 		boolean isEmailPassword = false;
+		voter1 = new Voter();
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:5555/voterinfo", "root", "root");
@@ -41,6 +42,8 @@ public class VoterDAO {
 			ResultSet rs = ps.executeQuery();
 			if (rs.next()) {
 				isEmailPassword = true;
+				voter1.setVoter_id(rs.getInt(VoterConstants.ID));
+				voter1.setIsActive(rs.getInt(VoterConstants.ISACTIVE));
 			}
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();

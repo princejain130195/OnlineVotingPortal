@@ -100,60 +100,12 @@ to {
 </head>
 <body>
 	<jsp:include page="Header.jsp" />
-
-	<p>Change image every 5 seconds:</p>
-
-	<div class="slideshow-container">
-
-		<div class="mySlides fade">
-			<div class="numbertext">1 / 3</div>
-			<img src="voting_img1.jpeg" style="width: 50%">
-			<div class="text">Caption Text</div>
-		</div>
-
-		<div class="mySlides fade">
-			<div class="numbertext">2 / 3</div>
-			<img src="vote2.jpeg" style="width: 50%">
-			<div class="text">Caption Two</div>
-		</div>
-
-		<div class="mySlides fade">
-			<div class="numbertext">3 / 3</div>
-			<img src="vote4.jpeg" style="width: 50%">
-			<div class="text">Caption Three</div>
-		</div>
-
-	</div>
-	<br>
-
-	<div style="text-align: center">
-		<span class="dot"></span> <span class="dot"></span> <span class="dot"></span>
-	</div>
-
-	<script>
-		var slideIndex = 0;
-		showSlides();
-
-		function showSlides() {
-			var i;
-			var slides = document.getElementsByClassName("mySlides");
-			var dots = document.getElementsByClassName("dot");
-			for (i = 0; i < slides.length; i++) {
-				slides[i].style.display = "none";
-			}
-			slideIndex++;
-			if (slideIndex > slides.length) {
-				slideIndex = 1
-			}
-			for (i = 0; i < dots.length; i++) {
-				dots[i].className = dots[i].className.replace(" active", "");
-			}
-			slides[slideIndex - 1].style.display = "block";
-			dots[slideIndex - 1].className += " active";
-			setTimeout(showSlides, 5000); // Change image every 2 seconds
-		}
-	</script>
-
-	<jsp:include page="footer.html" />
+	<%-- <jsp:include page="register-header.html" /> --%>
+	
+	
+	
+	<h1 align = "center" style="color:blue">Welcome to Voter Portal!!</h1>
+	<jsp:include page="donut-chart-page.jsp" />
+	<%-- <jsp:include page="footer.html" /> --%>
 </body>
 </html>
