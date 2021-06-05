@@ -1,3 +1,4 @@
+<!-- This Page is welcome page, it comes first and shows the donut chart -->
 <%@ page import="Admin.Admin"%>
 <html>
 <head>

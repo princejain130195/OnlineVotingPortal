@@ -1,3 +1,5 @@
+<!-- It shows the header info specific to navigate Home, Voter, candidate. -->
+
 <html>
 <head>
 <meta charset="utf-8">

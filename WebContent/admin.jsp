@@ -1,3 +1,5 @@
+<!-- this is admin login page, username password -->
+
 <html>
 <body>
 <jsp:include page="Header.jsp" />
